@@ -3,9 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            max-width: 975px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh; /* Container takes at least the full viewport height */
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin: 0;
+            padding: 20px;
+            color: #fff; /* White text color */
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px; /* Font size */
+        }
+        .footer a {
+            color: #4DF9FF; /* Tackling color */
+            text-decoration: underline; /* Underline to indicate Tackling is a link */
+        }
+        .command {
+            margin-top: 20px;
+        }
+        .command table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .command table th, .command table td {
+            border: 1px solid #fff;
+            padding: 8px;
+            text-align: left;
+        }
+        .command table th {
+            background-color: #444;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Test</h1>
+    <div class="container">
+        <h1>Private Twitch selfbot</h1>
+        
+        <div class="command">
+            <h2>7TV Commands:</h2>
+            <table>
+                <tr>
+                    <th>Command Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>7sa</td>
+                    <td>Displays how long a user has been subscribed to a channel using 7TV.</td>
+                </tr>
+                <tr>
+                    <td>7tv</td>
+                    <td>Shows the leaderboard of most used 7TV emotes in the channel.</td>
+                </tr>
+                <tr>
+                    <td>7tve</td>
+                    <td>Shows how many channels a user is an editor for using 7TV.</td>
+                </tr>
+                <tr>
+                    <td>7u</td>
+                    <td>Displays user-specific information on 7TV.</td>
+                </tr>
+                <tr>
+                    <td>7update</td>
+                    <td>Updates a user's preferences on 7TV.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="command">
+            <h2>User Information Commands:</h2>
+            <table>
+                <tr>
+                    <th>Command Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>badges</td>
+                    <td>Displays all Twitch badges a user has.</td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td>Displays the chat color of a Twitch user.</td>
+                </tr>
+                <tr>
+                    <td>dn</td>
+                    <td>Updates your display name on Twitch.</td>
+                </tr>
+                <tr>
+                    <td>e</td>
+                    <td>Updates your Twitch emote set.</td>
+                </tr>
+                <tr>
+                    <td>fa</td>
+                    <td>Shows how long a user has been following a specific channel.</td>
+                </tr>
+                <tr>
+                    <td>nh</td>
+                    <td>Displays the username history of a Twitch user.</td>
+                </tr>
+                <tr>
+                    <td>u</td>
+                    <td>Displays detailed information about a Twitch user.</td>
+                </tr>
+                <tr>
+                    <td>song</td>
+                    <td>Displays the currently playing song of a Twitch user.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="command">
+            <h2>Channel Information Commands:</h2>
+            <table>
+                <tr>
+                    <th>Command Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>chatstats</td>
+                    <td>Shows statistics about chat activity in the channel.</td>
+                </tr>
+                <tr>
+                    <td>chatters</td>
+                    <td>Displays a list of all current chatters in the channel.</td>
+                </tr>
+                <tr>
+                    <td>clear</td>
+                    <td>Clears the chat history in the current channel.</td>
+                </tr>
+                <tr>
+                    <td>ff</td>
+                    <td>Displays when a channel received its first follow.</td>
+                </tr>
+                <tr>
+                    <td>fl</td>
+                    <td>Shows the first message a user sent in the channel.</td>
+                </tr>
+                <tr>
+                    <td>followers</td>
+                    <td>Displays the number of followers a Twitch user has.</td>
+                </tr>
+                <tr>
+                    <td>follows</td>
+                    <td>Shows how many channels a Twitch user is following.</td>
+                </tr>
+                <tr>
+                    <td>founders</td>
+                    <td>Lists the founders of the channel.</td>
+                </tr>
+                <tr>
+                    <td>isbanned</td>
+                    <td>Checks if a user is banned in the channel.</td>
+                </tr>
+                <tr>
+                    <td>mod</td>
+                    <td>Lists all channels where the bot owner is a moderator.</td>
+                </tr>
+                <tr>
+                    <td>mods</td>
+                    <td>Lists all moderators in the channel.</td>
+                </tr>
+                <tr>
+                    <td>pin</td>
+                    <td>Pins a specific message in the chat.</td>
+                </tr>
+                <tr>
+                    <td>team</td>
+                    <td>Displays information about a Twitch team.</td>
+                </tr>
+                <tr>
+                    <td>vc</td>
+                    <td>Checks if a user is a VIP in the channel.</td>
+                </tr>
+                <tr>
+                    <td>vips</td>
+                    <td>Lists all VIPs in the channel.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="command">
+            <h2>Utility Commands:</h2>
+            <table>
+                <tr>
+                    <th>Command Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>massping</td>
+                    <td>Pings everyone in the channel's chat.</td>
+                </tr>
+                <tr>
+                    <td>mc</td>
+                    <td>Checks if a user is a moderator in the channel.</td>
+                </tr>
+                <tr>
+                    <td>pyr</td>
+                    <td>Sends a pyramid message.</td>
+                </tr>
+                <tr>
+                    <td>r</td>
+                    <td>Reloads all bot commands.</td>
+                </tr>
+                <tr>
+                    <td>rl</td>
+                    <td>Sends a random message in the chat.</td>
+                </tr>
+                <tr>
+                    <td>rs</td>
+                    <td>Restarts the bot.</td>
+                </tr>
+                <tr>
+                    <td>sd</td>
+                    <td>Shuts down the bot.</td>
+                </tr>
+                <tr>
+                    <td>spam</td>
+                    <td>Spams a message in the chat.</td>
+                </tr>
+                <tr>
+                    <td>split</td>
+                    <td>Splits a long message into multiple chat messages.</td>
+                </tr>
+                <tr>
+                    <td>wl</td>
+                    <td>Adds or removes access to the bot for a specified user.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Selfbot made by <a href="https://www.twitch.tv/tackling" target="_blank" style="font-size: 18px;">Tackling</a>.</p>
+        </div>
+    </div>
 </body>
 </html>
