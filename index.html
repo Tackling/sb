@@ -21,22 +21,22 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 100vh; /* Container takes at least the full viewport height */
+            min-height: 100vh;
         }
         h1 {
             text-align: center;
             font-size: 48px;
             margin: 0;
             padding: 20px;
-            color: #fff; /* White text color */
+            color: #fff;
         }
         .footer {
             text-align: center;
-            font-size: 14px; /* Font size */
+            font-size: 14px;
         }
         .footer a {
-            color: #4DF9FF; /* Tackling color */
-            text-decoration: underline; /* Underline to indicate Tackling is a link */
+            color: #4DF9FF;
+            text-decoration: underline;
         }
         .command {
             margin-top: 20px;
@@ -58,8 +58,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Twitch selfbot</h1>
-        
+        <h1>Twitch Selfbot</h1>
+
         <div class="command">
             <h2>7TV Commands:</h2>
             <table>
@@ -68,24 +68,24 @@
                     <th>Description</th>
                 </tr>
                 <tr>
+                    <td>7e</td>
+                    <td>Shows how many channels a user is a 7TV editor for.</td>
+                </tr>
+                <tr>
+                    <td>7emotes</td>
+                    <td>Shows the top 10 most used 7TV emotes.</td>
+                </tr>
+                <tr>
                     <td>7sa</td>
-                    <td>Displays how long a user has been subscribed to a channel using 7TV.</td>
-                </tr>
-                <tr>
-                    <td>7tv</td>
-                    <td>Shows the leaderboard of most used 7TV emotes in the channel.</td>
-                </tr>
-                <tr>
-                    <td>7tve</td>
-                    <td>Shows how many channels a user is an editor for using 7TV.</td>
+                    <td>Shows a user's 7TV subscription age.</td>
                 </tr>
                 <tr>
                     <td>7u</td>
-                    <td>Displays user-specific information on 7TV.</td>
+                    <td>Shows 7TV information about a user.</td>
                 </tr>
                 <tr>
-                    <td>7update</td>
-                    <td>Updates a user's preferences on 7TV.</td>
+                    <td>7up</td>
+                    <td>Updates a user's 7TV presence.</td>
                 </tr>
             </table>
         </div>
@@ -98,171 +98,221 @@
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td>badges</td>
-                    <td>Displays all Twitch badges a user has.</td>
+                    <td>a</td>
+                    <td>Spam announcements.</td>
                 </tr>
-                 <tr>
+                <tr>
                     <td>badge</td>
-                    <td>Displays info about equipped global badge.</td>
+                    <td>Displays info about a user's equipped badge.</td>
                 </tr>
                 <tr>
-                    <td>color</td>
-                    <td>Displays the chat color of a Twitch user.</td>
+                    <td>badges</td>
+                    <td>Displays all badges a user has.</td>
                 </tr>
                 <tr>
-                    <td>dn</td>
-                    <td>Updates your display name on Twitch.</td>
-                </tr>
-                <tr>
-                    <td>e</td>
-                    <td>Updates your Twitch emote set.</td>
-                </tr>
-                <tr>
-                    <td>fa</td>
-                    <td>Shows how long a user has been following a specific channel.</td>
-                </tr>
-                <tr>
-                    <td>nh</td>
-                    <td>Displays the username history of a Twitch user.</td>
-                </tr>
-                <tr>
-                    <td>u</td>
-                    <td>Displays detailed information about a Twitch user.</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>Displays the currently playing song of a Twitch user.</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="command">
-            <h2>Channel Information Commands:</h2>
-            <table>
-                <tr>
-                    <th>Command Name</th>
-                    <th>Description</th>
+                    <td>bh</td>
+                    <td>Displays ban history for partners.</td>
                 </tr>
                 <tr>
                     <td>chatstats</td>
-                    <td>Shows statistics about chat activity in the channel.</td>
+                    <td>Displays total messages for a user in a channel.</td>
                 </tr>
                 <tr>
                     <td>chatters</td>
-                    <td>Displays a list of all current chatters in the channel.</td>
+                    <td>Displays total number of chatters.</td>
                 </tr>
                 <tr>
                     <td>clear</td>
-                    <td>Clears the chat history in the current channel.</td>
+                    <td>Clears the chat spam.</td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td>Displays a user's Twitch chat color.</td>
+                </tr>
+                <tr>
+                    <td>fa</td>
+                    <td>Displays a user's followage to a channel.</td>
                 </tr>
                 <tr>
                     <td>ff</td>
-                    <td>Displays when a channel received its first follow.</td>
+                    <td>Displays a user's first follower.</td>
                 </tr>
                 <tr>
                     <td>fl</td>
-                    <td>Shows the first message a user sent in the channel.</td>
+                    <td>Displays a user's first logged line in a channel.</td>
                 </tr>
                 <tr>
                     <td>followers</td>
-                    <td>Displays the number of followers a Twitch user has.</td>
+                    <td>Displays a user's follower count and 1000 most recent followers.</td>
                 </tr>
                 <tr>
                     <td>follows</td>
-                    <td>Shows how many channels a Twitch user is following.</td>
-                </tr>
-                <tr>
-                    <td>founders</td>
-                    <td>Lists the founders of the channel.</td>
+                    <td>Displays how many channels a user follows.</td>
                 </tr>
                 <tr>
                     <td>isbanned</td>
-                    <td>Checks if a user is banned in the channel.</td>
+                    <td>Checks if a user is banned on Twitch.</td>
                 </tr>
                 <tr>
-                    <td>mod</td>
-                    <td>Lists all channels where the bot owner is a moderator.</td>
+                    <td>join</td>
+                    <td>Join the bot to a channel.</td>
                 </tr>
                 <tr>
-                    <td>mods</td>
-                    <td>Lists all moderators in the channel.</td>
+                    <td>part</td>
+                    <td>Part the bot from a channel.</td>
                 </tr>
                 <tr>
-                    <td>pin</td>
-                    <td>Pins a specific message in the chat.</td>
+                    <td>massping</td>
+                    <td>Mentions everyone in the viewer list.</td>
+                </tr>
+                <tr>
+                    <td>mc</td>
+                    <td>Checks if a user is a mod in a channel.</td>
+                </tr>
+                <tr>
+                    <td>nh</td>
+                    <td>Shows logged name history for a user.</td>
+                </tr>
+                <tr>
+                    <td>pfp</td>
+                    <td>Displays a user's profile picture.</td>
+                </tr>
+                <tr>
+                    <td>ping</td>
+                    <td>Pings and displays info about the bot.</td>
+                </tr>
+                <tr>
+                    <td>ping2</td>
+                    <td>Pings and displays extra info about the bot.</td>
+                </tr>
+                <tr>
+                    <td>pyr</td>
+                    <td>Sends a pyramid of messages in chat.</td>
+                </tr>
+                <tr>
+                    <td>rf</td>
+                    <td>Displays a channel's most recent follower.</td>
+                </tr>
+                <tr>
+                    <td>rl</td>
+                    <td>Displays a random message from a user in a channel.</td>
+                </tr>
+                <tr>
+                    <td>sa</td>
+                    <td>Displays a user's subscription information to a channel.</td>
+                </tr>
+                <tr>
+                    <td>si</td>
+                    <td>Displays stream information about a channel.</td>
+                </tr>
+                <tr>
+                    <td>song</td>
+                    <td>Displays what song a user is listening to.</td>
+                </tr>
+                <tr>
+                    <td>spam</td>
+                    <td>Spams messages in chat.</td>
+                </tr>
+                <tr>
+                    <td>split</td>
+                    <td>Splits 1 large message into individual messages.</td>
                 </tr>
                 <tr>
                     <td>team</td>
-                    <td>Displays information about a Twitch team.</td>
+                    <td>Displays info about a Twitch team.</td>
+                </tr>
+                <tr>
+                    <td>u</td>
+                    <td>Shows Twitch information about a user.</td>
                 </tr>
                 <tr>
                     <td>vc</td>
-                    <td>Checks if a user is a VIP in the channel.</td>
+                    <td>Checks if a user is VIP in a channel.</td>
+                </tr>
+                <tr>
+                    <td>mods</td>
+                    <td>Displays all mods of a channel.</td>
                 </tr>
                 <tr>
                     <td>vips</td>
-                    <td>Lists all VIPs in the channel.</td>
+                    <td>Displays all VIPs of a channel.</td>
+                </tr>
+                <tr>
+                    <td>vlb</td>
+                    <td>Dead command.</td>
                 </tr>
             </table>
         </div>
 
         <div class="command">
-            <h2>Utility Commands:</h2>
+            <h2>Owner Commands:</h2>
             <table>
                 <tr>
                     <th>Command Name</th>
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td>massping</td>
-                    <td>Pings everyone in the channel's chat.</td>
+                    <td>cmd add/edit/del</td>
+                    <td>Create, edit, or delete custom commands.</td>
                 </tr>
                 <tr>
-                    <td>mc</td>
-                    <td>Checks if a user is a moderator in the channel.</td>
+                    <td>dn</td>
+                    <td>Updates bot's display name.</td>
                 </tr>
                 <tr>
-                    <td>pyr</td>
-                    <td>Sends a pyramid message.</td>
+                    <td>e</td>
+                    <td>Updates bot's Twitch emoji set.</td>
+                </tr>
+				 <tr>
+                    <td>emotes</td>
+                    <td>Displays all emotes the bot has a sub to.</td>
+                </tr>
+                <tr>
+                    <td>js</td>
+                    <td>js.</td>
+                </tr>
+                <tr>
+                    <td>mod</td>
+                    <td>Displays all channels where the bot is a mod.</td>
+                </tr>
+                <tr>
+                    <td>msg</td>
+                    <td>Watches for messages from a user and sends them to chat.</td>
+                </tr>
+                <tr>
+                    <td>nuke</td>
+                    <td>Nukes a chat.</td>
+                </tr>
+                <tr>
+                    <td>pin</td>
+                    <td>Pins a message in a channel.</td>
+                </tr>
+                <tr>
+                    <td>prefix</td>
+                    <td>Chnage's the prefix of the bot.</td>
                 </tr>
                 <tr>
                     <td>r</td>
-                    <td>Reloads all bot commands.</td>
-                </tr>
-                <tr>
-                    <td>rl</td>
-                    <td>Sends a random message in the chat.</td>
+                    <td>Reload's the bot.</td>
                 </tr>
                 <tr>
                     <td>rs</td>
-                    <td>Restarts the bot.</td>
+                    <td>Restart's the bot.</td>
                 </tr>
-                <tr>
+				<tr>
                     <td>sd</td>
-                    <td>Shuts down the bot.</td>
+                    <td>Shutdown the bot.</td>
                 </tr>
-                <tr>
-                    <td>spam</td>
-                    <td>Spams a message in the chat.</td>
-                </tr>
-                <tr>
-                    <td>split</td>
-                    <td>Splits a long message into multiple chat messages.</td>
-                </tr>
-                <tr>
-                    <td>a</td>
-                    <td>Spam announces a message in the chat.</td>
-                </tr>
-                <tr>
-                    <td>wl</td>
-                    <td>Adds or removes access to the bot for a specified user.</td>
+				<tr>
+                    <td>wl add/remove</td>
+                    <td>whitelist a user to use the bot</td>
                 </tr>
             </table>
         </div>
 
-        <div class="footer">
-            <p>Selfbot made by <a href="https://www.twitch.tv/tackling" target="_blank" style="font-size: 18px;">Tackling</a>.</p>
-        </div>
+        <footer class="footer">
+            <p>Created by <a href="https://github.com/yourgithubprofile">Your Name</a></p>
+        </footer>
     </div>
 </body>
 </html>
